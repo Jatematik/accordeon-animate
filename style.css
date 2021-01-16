@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.accordeon {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align: left;
+  transition: 0.25s;
+  overflow: hidden;
+}
+.accordeon-group {
+  position: relative;
+  transition: 0.25s;
+  border-bottom: 1px solid rgb(240, 228, 228);
+}
+.accordeon-group:last-child {
+    border-bottom: none;
+}
+.panel-heading {
+  position: relative;
+  padding: 10px 15px;
+  background-color: lightcoral;
+  color: #ffffff;
+  z-index: 5;
+  transition: 0.25s;
+}
+.plus {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.25s;
+}
+.fa-plus {
+    transition: 0.25s;
+}
+.plus-active {
+    transform: rotate(45deg);
+}
+.panel-collapse {
+  padding: 10px 15px;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+  transition: 0.25s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.active-collapse {
+  top: 100%;
+}
+.active-group {
+    margin-top: ${accordionCollapse[i].offsetHeight}px;
+}
